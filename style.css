@@ -4,3 +4,38 @@
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+body {
+    height: 100vh;
+    padding: 5vh 10vh;
+}
+
+
+.container {
+    background-color: white;
+}
+
+img {
+    width: 100%;
+    border-radius: 50%;
+    height: 45px;
+    object-fit: cover;
+}
+
+#user-name {
+    display: flex;
+}
+
+i {
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.last-access {
+    color: grey;
+    font-size: 10px;
+}
+
+#section-icon {
+    text-align: end;
+}
