@@ -3,6 +3,7 @@ createApp({
     data() {
         return {
             activeContact: 0,
+            currentConversation: {},
             contacts: [
                 {
                     name: 'Kaneki',
@@ -170,5 +171,15 @@ createApp({
             
             
         }
-    }
+    },
+    mounted() {
+        // Inizializziamo la conversazione
+        this.currentConversation = this.contacts[0];
+    },
+    methods: {
+        // Cambiamo la conversazione quando clicchiamo su una chat diversa
+        changeConversation(contact) {
+            this.currentConversation = contact;
+        },
+    },
 }).mount('#app')
