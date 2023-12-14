@@ -26,13 +26,14 @@
     />
   </head>
   <body>
+    <div id="app">
     <div class="container-fluid">
       <div class="row">
         <div class="col-5">
           <div class="container-fluid">
             <div class="row">
               <div class="col-2">
-                <img src="sasuke-uchiha.webp" alt="" />
+                <img src="img/sasuke-uchiha.webp" alt="" />
               </div>
               <div class="col-7" id="user-name"><span>Sasuke</span></div>
               <div class="col-3" id="section-icon">
@@ -52,7 +53,7 @@
               <div class="row">
                 <div class="col">
                   <img
-                    src="kaneki-in-my-artstyle-v0-nng3h4focsla1.webp"
+                    src="img/kaneki.webp"
                     alt=""
                   />
                 </div>
@@ -121,161 +122,22 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" v-for="(contact, index) in contacts" :key="index">
             <div class="col-2">
-              <img
-                src="jujutsu-kaisen-come-funziona-potentissimo-dominio-sukuna-v5-683908-1200x1200.webp"
-                alt=""
-              />
+                <img :src="contact.avatar" alt="" />
             </div>
             <div class="col-9">
-              <span
-                >Sukuna
-                <p class="last-access">
-                  Ultimo messaggio inviato
-                </p></span
-              >
+                <span>{{ contact.name }}</span>
+                <p class="last-access">{{ contact.messages[contact.messages.length - 1].date }}</p>
             </div>
             <div class="col-1">
-                <span>12:00</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-              <img
-                src="Satoru_Gojo_arrives_on_the_battlefield_(Anime).webp"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <span
-                >Gojo
-                <p class="last-access">
-                  Ultimo messaggio inviato
-                </p></span
-              >
-            </div>
-            <div class="col-1">
-                <span>12:00</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-              <img
-                src="Tanjiro_kamado.webp"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <span
-                >Tanjiro
-                <p class="last-access">
-                  Ultimo messaggio inviato
-                </p></span
-              >
-            </div>
-            <div class="col-1">
-                <span>12:00</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-              <img
-                src="un-indiscrezione-rivelato-attore-zoro-live-action-one-piece-v3-424681-1280x720-1.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <span
-                >Zoro
-                <p class="last-access">
-                  Ultimo messaggio inviato
-                </p></span
-              >
-            </div>
-            <div class="col-1">
-                <span>12:00</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-              <img
-                src="kaido-one-piece-1-1.webp"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <span
-                >Kaido
-                <p class="last-access">
-                  Ultimo messaggio inviato
-                </p></span
-              >
-            </div>
-            <div class="col-1">
-                <span>12:00</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-              <img
-                src="800px-Kakashi_Hatake.png"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <span
-                >Kakashi
-                <p class="last-access">
-                  Ultimo messaggio inviato
-                </p></span
-              >
-            </div>
-            <div class="col-1">
-                <span>12:00</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-              <img
-                src="one-piece-gear-5.webp"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <span
-                >Luffy
-                <p class="last-access">
-                  Ultimo messaggio inviato
-                </p></span
-              >
-            </div>
-            <div class="col-1">
-                <span>12:00</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-              <img
-                src="Itachi-Uchica-naruto.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <span
-                >Itachi
-                <p class="last-access">
-                  Ultimo messaggio inviato
-                </p></span
-              >
-            </div>
-            <div class="col-1">
-                <span>12:00</span>
+                <span class="last-access">12:00</span>
             </div>
         </div>
         <div class="col-7"></div>
       </div>
     </div>
+</div>
     <script src="script.js"></script>
   </body>
 </html>
