@@ -53,3 +53,13 @@ img {
 i {
     margin-right: 10px;
 }
+
+#chat-singola {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.448);
+    padding: 5px;
+}
+
+#chat-singola:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.155);
+}
