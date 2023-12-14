@@ -75,5 +75,10 @@ i {
     padding: 10px;
     border-radius: 10px;
     font-size: 12px;
-    background-color: rgba(128, 128, 128, 0.453);
+    background-color: white;
+}
+
+#container-chat {
+    background-image: url(img/chat-background.jpg);
+    padding-top: 30px;
 }
