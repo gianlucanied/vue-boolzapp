@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
 }
 
 body {
@@ -26,11 +27,6 @@ img {
     display: flex;
 }
 
-i {
-    margin-top: 15px;
-    margin-left: 5px;
-}
-
 .last-access {
     color: grey;
     font-size: 10px;
@@ -38,4 +34,18 @@ i {
 
 #section-icon {
     text-align: end;
+}
+
+#attiva-notifiche {
+    font-size: 10px;
+    text-decoration: underline;
+    color: grey;
+}
+
+#section-notifiche {
+    padding-top: 10px;
+}
+
+#search-barra {
+    padding: 0;
 }
