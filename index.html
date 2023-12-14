@@ -143,21 +143,7 @@
               </div>
             </div>
           </div>
-          <div class="col-7">
-            <div
-              class="row"
-              v-for="(message, index) in currentConversation.messages"
-              :key="index"
-            >
-              <div class="col-12">
-                <p
-                  :class="{ sent: message.status === 'sent', received: message.status === 'received' }"
-                >
-                  {{ message.message }}
-                </p>
-              </div>
-            </div>
-          </div>
+          <div class="col-7"></div>
         </div>
       </div>
     </div>
