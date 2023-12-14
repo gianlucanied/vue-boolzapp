@@ -143,7 +143,31 @@
               </div>
             </div>
           </div>
-          <div class="col-7"></div>
+          <div class="col-7">
+            <div class="row">
+              <div class="col-7"></div>
+              <div class="col-3" id="my-message">Hai portato</div>
+              <div class="col-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col-3" id="avatar-message">Ciao come stai</div>
+              <div class="col-7"></div>
+            </div>
+            <!-- <div
+              class="row"
+              v-for="(message, index) in currentConversation.messages"
+              :key="index"
+            >
+              <div class="col-12">
+                <p
+                  :class="{ sent: message.status === 'sent', received: message.status === 'received' }"
+                >
+                  {{ message.message }}
+                </p>
+              </div>
+            </div> -->
+          </div>
         </div>
       </div>
     </div>

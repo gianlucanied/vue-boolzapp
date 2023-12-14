@@ -63,3 +63,17 @@ i {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.155);
 }
+
+#my-message {
+    background-color: lime;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+#avatar-message {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: rgba(128, 128, 128, 0.453);
+}
