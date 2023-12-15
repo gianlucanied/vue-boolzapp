@@ -35,10 +35,29 @@ body {
     background-color: white;
 }
 
-img {
+#user-name span {
+    margin-top: 20px;
+}
+
+#chat-singola img {
     width: 100%;
     border-radius: 50%;
-    height: 45px;
+    height: 65px;
+    object-fit: cover;
+}
+
+.col-2 img {
+    width: 100%;
+    border-radius: 50%;
+    height: 65px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.col img {
+    width: 130%;
+    border-radius: 50%;
+    height: 60px;
     object-fit: cover;
 }
 
