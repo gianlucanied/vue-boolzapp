@@ -6,11 +6,30 @@
     font-size: 14px;
 }
 
+#app {
+    border: 1px solid rgba(128, 128, 128, 0.592);
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(128, 128, 128, 0.066);
+}
+
+
 body {
     height: 100vh;
     padding: 5vh 10vh;
 }
 
+#avatar-name {
+    background-color: rgba(128, 128, 128, 0.066);
+}
+
+.col {
+    background-color: rgba(128, 128, 128, 0.066);
+}
+
+#icon-avatar {
+    background-color: rgba(128, 128, 128, 0.066);
+}
 
 .container {
     background-color: white;
@@ -48,6 +67,7 @@ img {
 
 #search-barra {
     padding: 0;
+    width: 91%;
 }
 
 i {
@@ -86,8 +106,21 @@ i {
 #container-chat {
     background-image: url(img/chat-background.jpg);
     padding-top: 30px;
+    height: 84vh;
+    overflow-y: auto;
 }
 
-.new-message {
-    
+.new-message input{
+    width: 95%;
+    padding: 10px;
+}
+
+.new-message button {
+    width: 5%;
+    margin: 0;
+    padding: 10px;
+}
+
+.col-3 {
+    text-align: end;
 }

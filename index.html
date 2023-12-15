@@ -57,7 +57,7 @@
                   <div class="col">
                     <img :src="currentConversation.avatar" alt="" />
                   </div>
-                  <div class="col-8">
+                  <div class="col-8" id="avatar-name">
                     <span
                       >{{ currentConversation.name }}
                       <p class="last-access">
@@ -65,7 +65,7 @@
                       </p></span
                     >
                   </div>
-                  <div class="col-3">
+                  <div class="col-3" id="icon-avatar">
                     <i
                       class="fa-solid fa-magnifying-glass"
                       style="color: #c0c0c0"
@@ -161,7 +161,10 @@
                 </p>
               </div>
             </div>
-            <div class="new-message">
+          </div>
+          <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7 new-message">
               <input
                 v-model="newSentMessage"
                 type="text"
