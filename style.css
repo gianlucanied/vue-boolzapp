@@ -8,7 +8,7 @@
 
 #app {
     border: 1px solid rgba(128, 128, 128, 0.592);
-    padding: 10px;
+    padding: 10px 0 10px 0;
     margin: 5px;
     background-color: rgba(128, 128, 128, 0.066);
 }
@@ -63,11 +63,24 @@ img {
 
 #section-notifiche {
     padding-top: 10px;
+    background-color: aqua;
+}
+
+#section-notifiche i {
+    margin-top: 20px;
+}
+
+#section-notifiche p {
+    margin-left: -50px;
 }
 
 #search-barra {
-    padding: 0;
-    width: 91%;
+    padding: 5px;
+    width: 89%;
+}
+
+#barra-to-search-i i {
+    padding: 5px;
 }
 
 i {
@@ -106,7 +119,7 @@ i {
 #container-chat {
     background-image: url(img/chat-background.jpg);
     padding-top: 30px;
-    height: 84vh;
+    height: auto;
     overflow-y: auto;
 }
 
