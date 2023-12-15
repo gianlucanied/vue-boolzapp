@@ -182,7 +182,7 @@ createApp({
             this.currentConversation = contact;
         },
         // Creiamo un metodo per inviare il messaggio
-        AddSentMessage() {
+        addSentMessage() {
              const sentMessage = {
                     message: this.newSentMessage,
                     status: 'sent'
