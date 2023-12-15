@@ -161,6 +161,17 @@
                 </p>
               </div>
             </div>
+            <div class="new-message">
+              <input
+                v-model="newSentMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+                @keyup.enter="addSentMessage"
+              />
+              <button @click="addSentMessage">
+                <i class="fa-solid fa-paper-plane" style="color: #616161"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
