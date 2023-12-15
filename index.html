@@ -149,13 +149,13 @@
                 :key="index"
               >
                 <p v-if="message.status === 'sent'" class="my-message">
-                  {{ message.message }}
+                  {{ message.message }} {{message.date}}
                 </p>
                 <p
                   v-else-if="message.status === 'received'"
                   class="avatar-message"
                 >
-                  {{ message.message }}
+                  {{ message.message }} {{message.date}}
                 </p>
               </div>
             </div>
