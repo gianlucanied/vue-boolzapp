@@ -114,10 +114,7 @@
                   <input
                     id="search-barra"
                     type="text"
-                    class="form-control"
                     placeholder="Cerca o inizia una nuova chat"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
                   />
                 </div>
               </div>
@@ -144,29 +141,26 @@
             </div>
           </div>
           <div class="col-7" id="container-chat">
-            <div class="row">
-              <div class="col-7"></div>
-              <div class="col-3" id="my-message">Hai portato</div>
-              <div class="col-2"></div>
-            </div>
-            <div class="row">
-              <div class="col-2"></div>
-              <div class="col-3" id="avatar-message">Ciao come stai</div>
-              <div class="col-7"></div>
-            </div>
-            <!-- <div
+            <div
               class="row"
-              v-for="(message, index) in currentConversation.messages"
-              :key="index"
+              v-if="currentConversation.messages && currentConversation.messages.length > 0"
             >
-              <div class="col-12">
+              <div
+                class="col-12"
+                v-for="(message, index) in currentConversation.messages"
+                :key="index"
+              >
+                <p v-if="message.status === 'sent'" class="my-message">
+                  {{ message.message }}
+                </p>
                 <p
-                  :class="{ sent: message.status === 'sent', received: message.status === 'received' }"
+                  v-else-if="message.status === 'received'"
+                  class="avatar-message"
                 >
                   {{ message.message }}
                 </p>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>

@@ -64,18 +64,23 @@ i {
     background-color: rgba(128, 128, 128, 0.155);
 }
 
-#my-message {
+.my-message {
     background-color: lime;
     padding: 10px;
     border-radius: 10px;
     font-size: 12px;
+    margin-left: 55%;
+    margin-right: 15%;
 }
 
-#avatar-message {
+
+.avatar-message {
     padding: 10px;
     border-radius: 10px;
     font-size: 12px;
     background-color: white;
+    margin-left: 15%;
+    margin-right: 55%;
 }
 
 #container-chat {
