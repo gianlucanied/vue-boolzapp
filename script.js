@@ -191,6 +191,18 @@ createApp({
                 this.currentConversation.messages.push(sentMessage);
                 // Cancelliamo dopo che il messaggio è stato inviato
                 this.newSentMessage = "";
+
+                // Impostiamo un timer di 1 secondo che ci faccia ricevere un messaggio dopo che noi ne inviamo uno
+                setTimeout(() => {
+                    const receivedMessage = {
+                        message: 'Ok!',
+                        status: 'received'
+                    };
+            
+                    // Pushiamo nell'array il messaggio ricevuto
+                    this.currentConversation.messages.push(receivedMessage);
+                }, 1000); 
+            
             
         },
     },
