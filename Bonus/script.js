@@ -229,15 +229,24 @@ createApp({
 
                 // Impostiamo un timer di 1 secondo che ci faccia ricevere un messaggio dopo che noi ne inviamo uno
                 setTimeout(() => {
-                    const receivedMessage = {
-                        message: axios.get("https://flynn.boolean.careers/exercises/api/random/sentence"),
-                        status: 'received',
-                        // Aggiungiamo la data e l'ora
-                        date: new Date().toLocaleString(),
-                    };
-            
-                    // Pushiamo nell'array il messaggio ricevuto
-                    this.currentConversation.messages.push(receivedMessage);
+
+                    // Chiamiamo con axios una frase random di risposta
+                    axios.get("https://flynn.boolean.careers/exercises/api/random/sentence")
+                    
+                        .then((response) => {
+                            // Prendiamo la frase creata random tramite axios
+                            const testoMessaggioRandom = response.data.response;
+                
+                            // Creaiamo un oggetto con il messaggio
+                            const receivedMessage = {
+                                message: testoMessaggioRandom,
+                                status: 'received',
+                                date: new Date().toLocaleString(),
+                            };
+                
+                            // Pushare nell'array il messaggio ricevuto
+                            this.currentConversation.messages.push(receivedMessage);
+                        })
                 }, 1000); 
         },
         
