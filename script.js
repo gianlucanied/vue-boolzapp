@@ -3,6 +3,7 @@ createApp({
     data() {
         return {
             activeContact: 0,
+            cercaLettere: '',
             currentConversation: {},
             contacts: [
                 {
@@ -173,6 +174,16 @@ createApp({
             
         }
     },
+
+    // Creiamo una funzione che cerchi i nomi nella barra in alto a sinistra mentre digitiamo
+    computed: {
+        contattiCercati() {
+          return this.contacts.filter(contact =>
+            contact.name.toLowerCase().includes(this.cercaLettere.toLowerCase())
+          );
+        },
+      },
+
     mounted() {
         // Inizializziamo la conversazione
         this.currentConversation = this.contacts[0];
