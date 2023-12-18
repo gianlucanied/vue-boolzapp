@@ -187,7 +187,8 @@ createApp({
         addSentMessage() {
              const sentMessage = {
                     message: this.newSentMessage,
-                    status: 'sent'
+                    status: 'sent',
+                    date: new Date().toLocaleString(),
                 };
                 // Pushiamo nell'array il nostro nuovo messaggio
                 this.currentConversation.messages.push(sentMessage);
@@ -198,7 +199,8 @@ createApp({
                 setTimeout(() => {
                     const receivedMessage = {
                         message: 'Ok!',
-                        status: 'received'
+                        status: 'received',
+                        date: new Date().toLocaleString(),
                     };
             
                     // Pushiamo nell'array il messaggio ricevuto
