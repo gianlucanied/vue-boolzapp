@@ -165,6 +165,7 @@ createApp({
                             status: 'received'
                         }
                     ],
+                    
                 }
             ]
             
@@ -177,6 +178,7 @@ createApp({
         this.currentConversation = this.contacts[0];
     },
     methods: {
+
         // Cambiamo la conversazione quando clicchiamo su una chat diversa
         changeConversation(contact) {
             this.currentConversation = contact;
@@ -205,5 +207,6 @@ createApp({
             
             
         },
+        
     },
 }).mount('#app')

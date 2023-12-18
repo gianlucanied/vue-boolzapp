@@ -156,3 +156,8 @@ i {
 .col-3 {
     text-align: end;
 }
+
+.orario-messaggio {
+    color: grey;
+    font-size: 10px;
+}
