@@ -72,6 +72,11 @@ body {
 
 #section-icon {
     text-align: end;
+    margin-top: 20px;
+}
+
+i:hover {
+    cursor: pointer;
 }
 
 #attiva-notifiche {
@@ -96,10 +101,15 @@ body {
 #search-barra {
     padding: 5px;
     width: 89%;
+    margin-top: 5px;
 }
 
 #barra-to-search-i i {
     padding: 5px;
+}
+
+.input-group-prepend span {
+    margin-top: 5px;
 }
 
 i {
@@ -145,6 +155,14 @@ i {
 .new-message input{
     width: 95%;
     padding: 10px;
+}
+
+#icon-avatar i {
+    padding-top: 20px;
+}
+
+#avatar-name {
+    padding-top: 13px;
 }
 
 .new-message button {
