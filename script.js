@@ -2,9 +2,17 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            
+            // Impostiamo quale chat visualizzare all'inizio
             activeContact: 0,
+
+            // Creiamo una variabile per cercare la chat che ci interessa tra tutte
             cercaLettere: '',
+
+            // Creiamo la proprietà dell'oggetto
             currentConversation: {},
+
+            // Array
             contacts: [
                 {
                     name: 'Kaneki',
@@ -199,6 +207,7 @@ createApp({
              const sentMessage = {
                     message: this.newSentMessage,
                     status: 'sent',
+                    //Aggiungiamo la data e l'ora
                     date: new Date().toLocaleString(),
                 };
                 // Pushiamo nell'array il nostro nuovo messaggio
@@ -211,14 +220,13 @@ createApp({
                     const receivedMessage = {
                         message: 'Ok!',
                         status: 'received',
+                        // Aggiungiamo la data e l'ora
                         date: new Date().toLocaleString(),
                     };
             
                     // Pushiamo nell'array il messaggio ricevuto
                     this.currentConversation.messages.push(receivedMessage);
                 }, 1000); 
-            
-            
         },
         
     },
