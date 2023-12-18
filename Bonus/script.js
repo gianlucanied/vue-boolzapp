@@ -217,7 +217,7 @@ createApp({
             const sentMessage = {
               message: this.newSentMessage,
               status: 'sent',
-              
+
               //Aggiungiamo la data e l'ora
               date: new Date().toLocaleString(),
             };
@@ -230,7 +230,7 @@ createApp({
                 // Impostiamo un timer di 1 secondo che ci faccia ricevere un messaggio dopo che noi ne inviamo uno
                 setTimeout(() => {
                     const receivedMessage = {
-                        message: 'Ok!',
+                        message: axios.get("https://flynn.boolean.careers/exercises/api/random/sentence"),
                         status: 'received',
                         // Aggiungiamo la data e l'ora
                         date: new Date().toLocaleString(),
