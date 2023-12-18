@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+}
+
+#app {
+    border: 1px solid rgba(128, 128, 128, 0.592);
+    padding: 10px 0 10px 0;
+    margin: 5px;
+    background-color: rgba(128, 128, 128, 0.066);
+}
+
+
+body {
+    height: 100vh;
+    padding: 5vh 10vh;
+}
+
+#avatar-name {
+    background-color: rgba(128, 128, 128, 0.066);
+}
+
+.col {
+    background-color: rgba(128, 128, 128, 0.066);
+}
+
+#icon-avatar {
+    background-color: rgba(128, 128, 128, 0.066);
+}
+
+.container {
+    background-color: white;
+}
+
+#user-name span {
+    margin-top: 20px;
+}
+
+#chat-singola img {
+    width: 100%;
+    border-radius: 50%;
+    height: 65px;
+    object-fit: cover;
+}
+
+.col-2 img {
+    width: 100%;
+    border-radius: 50%;
+    height: 65px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.col img {
+    width: 130%;
+    border-radius: 50%;
+    height: 60px;
+    object-fit: cover;
+}
+
+#user-name {
+    display: flex;
+}
+
+.last-access {
+    color: grey;
+    font-size: 10px;
+}
+
+#section-icon {
+    text-align: end;
+}
+
+#attiva-notifiche {
+    font-size: 10px;
+    text-decoration: underline;
+    color: grey;
+}
+
+#section-notifiche {
+    padding-top: 10px;
+    background-color: aqua;
+}
+
+#section-notifiche i {
+    margin-top: 20px;
+}
+
+#section-notifiche p {
+    margin-left: -50px;
+}
+
+#search-barra {
+    padding: 5px;
+    width: 89%;
+}
+
+#barra-to-search-i i {
+    padding: 5px;
+}
+
+i {
+    margin-right: 10px;
+}
+
+#chat-singola {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.448);
+    padding: 5px;
+}
+
+#chat-singola:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.155);
+}
+
+.my-message {
+    background-color: lime;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 55%;
+    margin-right: 15%;
+}
+
+
+.avatar-message {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: white;
+    margin-left: 15%;
+    margin-right: 55%;
+}
+
+#container-chat {
+    background-image: url(img/chat-background.jpg);
+    padding-top: 30px;
+    height: 115vh;
+    overflow-y: auto;
+}
+
+.new-message input{
+    width: 95%;
+    padding: 10px;
+}
+
+.new-message button {
+    width: 5%;
+    margin: 0;
+    padding: 10px;
+}
+
+.col-3 {
+    text-align: end;
+}
+
+.orario-messaggio {
+    color: grey;
+    font-size: 10px;
+    margin-left: 105px;
+}

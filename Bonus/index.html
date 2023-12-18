@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolzapp</title>
+
+    <!-- Inclusione Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Inclusione foglio di stile -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Inclusione Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Inclusione Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-5">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-2">
+                  <img src="img/sasuke-uchiha.webp" alt="" />
+                </div>
+                <div class="col-7" id="user-name">
+                  <span>Sasuke Uchiha</span>
+                </div>
+                <div class="col-3" id="section-icon">
+                  <i
+                    class="fa-solid fa-circle-notch"
+                    style="color: #c0c0c0"
+                  ></i>
+                  <i class="fa-solid fa-message" style="color: #c0c0c0"></i>
+                  <i
+                    class="fa-solid fa-ellipsis-vertical"
+                    style="color: #c0c0c0"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="row">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <img :src="currentConversation.avatar" alt="" />
+                  </div>
+                  <div class="col-8" id="avatar-name">
+                    <span
+                      >{{ currentConversation.name }}
+                      <p class="last-access">
+                        Ultimo accesso oggi alle 12:00
+                      </p></span
+                    >
+                  </div>
+                  <div class="col-3" id="icon-avatar">
+                    <i
+                      class="fa-solid fa-magnifying-glass"
+                      style="color: #c0c0c0"
+                    ></i>
+                    <i class="fa-solid fa-paperclip" style="color: #c0c0c0"></i>
+                    <i
+                      class="fa-solid fa-ellipsis-vertical"
+                      style="color: #c0c0c0"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <div id="section-notifiche" class="row">
+              <div class="col-2">
+                <i class="fa-solid fa-bell-slash fa-xl"></i>
+              </div>
+              <div class="col-8">
+                <p>
+                  Ricevi notifiche di nuovi messaggi
+                  <br /><span id="attiva-notifiche"
+                    >Attiva notifiche desktop</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div id="barra-to-search-i" class="row">
+              <div class="col-12">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i
+                        class="fa-solid fa-magnifying-glass"
+                        style="color: #c0c0c0"
+                      ></i
+                    ></span>
+                  </div>
+                  <input
+                    id="search-barra"
+                    type="text"
+                    placeholder="Cerca o inizia una nuova chat"
+                    v-model="cercaLettere"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              id="chat-singola"
+              class="row"
+              v-for="(contact, index) in contattiCercati"
+              :key="index"
+              @click="changeConversation(contact)"
+            >
+              <div class="col-2">
+                <img :src="contact.avatar" alt="" />
+              </div>
+              <div class="col-9">
+                <span>{{ contact.name }}</span>
+                <p class="last-access">
+                  {{ contact.messages[contact.messages.length - 1].message }}
+                </p>
+              </div>
+              <div class="col-1">
+                <span class="last-access">12:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-7" id="container-chat">
+            <div
+              class="row"
+              v-if="currentConversation.messages && currentConversation.messages.length > 0"
+            >
+              <div
+                class="col-12"
+                v-for="(message, index) in currentConversation.messages"
+                :key="index"
+              >
+                <p v-if="message.status === 'sent'" class="my-message">
+                  {{ message.message }}
+                  <br />
+                  <span class="orario-messaggio">{{message.date}}</span>
+                </p>
+                <p
+                  v-else-if="message.status === 'received'"
+                  class="avatar-message"
+                >
+                  {{ message.message }}
+                  <br />
+                  <span class="orario-messaggio">{{message.date}}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7 new-message">
+              <input
+                v-model="newSentMessage"
+                type="text"
+                placeholder="Scrivi un messaggio"
+                @keyup.enter="addSentMessage"
+              />
+              <button @click="addSentMessage">
+                <i class="fa-solid fa-paper-plane" style="color: #616161"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
