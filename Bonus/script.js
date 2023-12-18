@@ -202,14 +202,26 @@ createApp({
         changeConversation(contact) {
             this.currentConversation = contact;
         },
+
         // Creiamo un metodo per inviare il messaggio
         addSentMessage() {
-             const sentMessage = {
-                    message: this.newSentMessage,
-                    status: 'sent',
-                    //Aggiungiamo la data e l'ora
-                    date: new Date().toLocaleString(),
-                };
+
+            // Controlliamo se il messaggio è vuoto o contiene solo spazi
+            if (this.newSentMessage.trim() === "") {
+
+              // Se il messaggio è vuoto o contiene solo spazi, allora usciamo dalla funzione
+              return;
+            }
+        
+            // Altrimenti inviamo il messaggio
+            const sentMessage = {
+              message: this.newSentMessage,
+              status: 'sent',
+              
+              //Aggiungiamo la data e l'ora
+              date: new Date().toLocaleString(),
+            };
+
                 // Pushiamo nell'array il nostro nuovo messaggio
                 this.currentConversation.messages.push(sentMessage);
                 // Cancelliamo dopo che il messaggio è stato inviato
