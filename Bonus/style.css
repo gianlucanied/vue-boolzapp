@@ -15,7 +15,7 @@
 
 
 body {
-    height: 100vh;
+    height: 85vh;
     padding: 5vh 10vh;
 }
 
@@ -40,24 +40,25 @@ body {
 }
 
 #chat-singola img {
-    width: 100%;
+    width: 70%;
     border-radius: 50%;
-    height: 65px;
+    height: 45px;
     object-fit: cover;
+    margin-left: 7px;
 }
 
 .col-2 img {
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
-    height: 65px;
+    height: 50px;
     object-fit: cover;
     margin-bottom: 10px;
 }
 
 .col img {
-    width: 130%;
+    width: 100%;
     border-radius: 50%;
-    height: 60px;
+    height: 50px;
     object-fit: cover;
 }
 
@@ -148,7 +149,7 @@ i {
 #container-chat {
     background-image: url(img/chat-background.jpg);
     padding-top: 30px;
-    height: 115vh;
+    height: 92vh;
     overflow-y: auto;
 }
 
