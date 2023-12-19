@@ -8,15 +8,14 @@
 
 #app {
     border: 1px solid rgba(128, 128, 128, 0.592);
-    padding: 10px 0 10px 0;
-    margin: 5px;
+    padding: 5px 0 5px 0;
     background-color: rgba(128, 128, 128, 0.066);
 }
 
 
 body {
     height: 85vh;
-    padding: 5vh 10vh;
+    padding: 1vh 14vh;
 }
 
 #avatar-name {
@@ -56,7 +55,7 @@ body {
 }
 
 .col img {
-    width: 100%;
+    width: 110%;
     border-radius: 50%;
     height: 50px;
     object-fit: cover;
@@ -87,7 +86,7 @@ i:hover {
 }
 
 #section-notifiche {
-    padding-top: 10px;
+    padding-top: 5px;
     background-color: aqua;
 }
 
@@ -119,7 +118,7 @@ i {
 
 #chat-singola {
     border-bottom: 1px solid rgba(128, 128, 128, 0.448);
-    padding: 5px;
+    padding-top: 2px;
 }
 
 #chat-singola:hover {
@@ -149,7 +148,7 @@ i {
 #container-chat {
     background-image: url(img/chat-background.jpg);
     padding-top: 30px;
-    height: 92vh;
+    height: 82vh;
     overflow-y: auto;
 }
 
